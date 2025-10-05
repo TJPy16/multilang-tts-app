@@ -1,11 +1,10 @@
 import tempfile
 import pandas as pd
 import streamlit as st
+import google.generativeai as genai
 
 from gtts import gTTS
 from pypdf import PdfReader
-from key import GEMINI_API_KEY
-import google.generativeai as genai
 
 genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 model = genai.GenerativeModel('gemini-2.5-flash')
@@ -88,3 +87,4 @@ if st.button('Translate & Generate Speech'):
         except Exception as error:
 
             st.error(f"Error during speech synthesis: {error}")
+
