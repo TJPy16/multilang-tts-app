@@ -1,6 +1,6 @@
 streamlit
 pandas
-gtts
+gtts==2.5.1
 google-generativeai
 pypdf
 openpyxl
