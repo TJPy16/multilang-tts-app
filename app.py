@@ -7,7 +7,7 @@ from pypdf import PdfReader
 from key import GEMINI_API_KEY
 import google.generativeai as genai
 
-genai.configure(api_key=GEMINI_API_KEY)
+genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
 model = genai.GenerativeModel('gemini-2.5-flash')
 
 st.title("Tinotenda J.T's Multilanguage Translation Application.")
@@ -86,4 +86,5 @@ if st.button('Translate & Generate Speech'):
                     mime='audio/mpeg')
 
         except Exception as error:
+
             st.error(f"Error during speech synthesis: {error}")
