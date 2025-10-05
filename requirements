@@ -1,6 +1,0 @@
-streamlit
-pandas
-gtts==2.5.1
-google-generativeai
-pypdf
-openpyxl
